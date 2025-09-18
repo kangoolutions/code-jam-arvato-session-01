@@ -1,0 +1,58 @@
+meta {
+  name: send Data to CI
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://kangoo-dev2-aws.it-cpi034-rt.cfapps.us10-002.hana.ondemand.com/http/codejam/lastgang
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: sb-025e6987-8208-4c58-a28e-03634a1f524b!b155140|it-rt-kangoo-dev2-aws!b410334
+  password: 5fa2b72a-74f2-4670-b30a-77766e1b90f7$n9uIuZhv4TrI7KnDFAA_IjwDJx1dKIZNt7m1AkVsDgM=
+}
+
+body:json {
+  {
+    "profileHeader": {
+      "profileName": "Household Electricity Consumption 2022-2024",
+      "profileType": "AnnualEnergyProfile",
+      "description": "Aggregated energy profile for a household customer from 2022 to 2024.",
+      "unit": "kW",
+      "totalPeriod": {
+        "start": "2022-01-01",
+        "end": "2024-12-31"
+      },
+      "totalEnergyAmount": 19000.4
+  
+    },
+    "profileValues": [
+      {
+       
+        "ValueId":"1",
+        "start": "2022-01-01",
+        "end": "2024-12-31",
+        "energyAmount": 3200.5
+      },
+      {
+        "ValueId":"2",
+        "start": "2023-01-01",
+        "end": "2023-12-31",
+        "energyAmount": 2950.2
+      },
+      { 
+        "ValueId":"3",
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "energyAmount": 2849.7
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

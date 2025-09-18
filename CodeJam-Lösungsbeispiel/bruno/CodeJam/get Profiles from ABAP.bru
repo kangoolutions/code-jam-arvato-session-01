@@ -1,0 +1,20 @@
+meta {
+  name: get Profiles from ABAP
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://ffc96189-30d5-4d4f-a63a-f9c39b653d16.abap.us10.hana.ondemand.com/sap/opu/odata/sap/Z_PROFILE_SRV_BIND/Z_I_PROFILE
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: TEST_LBA
+  password: <%3{uUDZNzPZZJp&T6vwVi2qXwNAanmRR$Hy}=by
+}
+
+settings {
+  encodeUrl: true
+}

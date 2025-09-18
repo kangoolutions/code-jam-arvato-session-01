@@ -1,0 +1,198 @@
+{
+  "name": "CodeJam",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Send Data",
+      "filename": "Send Data.bru",
+      "seq": 1,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://kangoo-dev2-aws.it-cpi034-rt.cfapps.us10-002.hana.ondemand.com/http/codejam/lastgang",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"profileHeader\": {\n    \"profileName\": \"Household Electricity Consumption 2022-2024\",\n    \"profileType\": \"AnnualEnergyProfile\",\n    \"description\": \"Aggregated energy profile for a household customer from 2022 to 2024.\",\n    \"unit\": \"kW\",\n    \"totalPeriod\": {\n      \"start\": \"2022-01-01\",\n      \"end\": \"2024-12-31\"\n    },\n    \"totalEnergyAmount\": 19000.4\n\n  },\n  \"profileValues\": [\n    {\n     \n      \"ValueId\":\"1\",\n      \"start\": \"2022-01-01\",\n      \"end\": \"2024-12-31\",\n      \"energyAmount\": 3200.5\n    },\n    {\n      \"ValueId\":\"2\",\n      \"start\": \"2023-01-01\",\n      \"end\": \"2023-12-31\",\n      \"energyAmount\": 2950.2\n    },\n    { \n      \"ValueId\":\"3\",\n      \"start\": \"2024-01-01\",\n      \"end\": \"2024-12-31\",\n      \"energyAmount\": 2849.7\n    }\n  ]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "basic",
+          "basic": {
+            "username": "sb-025e6987-8208-4c58-a28e-03634a1f524b!b155140|it-rt-kangoo-dev2-aws!b410334",
+            "password": "5fa2b72a-74f2-4670-b30a-77766e1b90f7$n9uIuZhv4TrI7KnDFAA_IjwDJx1dKIZNt7m1AkVsDgM="
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Profiles",
+      "filename": "Profiles.bru",
+      "seq": 2,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://ffc96189-30d5-4d4f-a63a-f9c39b653d16.abap.us10.hana.ondemand.com/sap/opu/odata/sap/Z_PROFILE_SRV_BIND/Z_I_PROFILE",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "basic",
+          "basic": {
+            "username": "TEST_LBA",
+            "password": "<%3{uUDZNzPZZJp&T6vwVi2qXwNAanmRR$Hy}=by"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Values",
+      "filename": "Values.bru",
+      "seq": 4,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://ffc96189-30d5-4d4f-a63a-f9c39b653d16.abap.us10.hana.ondemand.com/sap/opu/odata/sap/Z_PROFILE_SRV_BIND/Z_I_PROFILEVAL",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "basic",
+          "basic": {
+            "username": "TEST_LBA",
+            "password": "<%3{uUDZNzPZZJp&T6vwVi2qXwNAanmRR$Hy}=by"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete Profiles",
+      "filename": "Delete Profiles.bru",
+      "seq": 4,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete Values",
+      "filename": "Delete Values.bru",
+      "seq": 6,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://ffc96189-30d5-4d4f-a63a-f9c39b653d16.abap.us10.hana.ondemand.com/sap/opu/odata/sap/Z_PROFILE_SRV_BIND/Z_I_PROFILEVAL(profile_id='5',value_id='1')",
+        "method": "DELETE",
+        "headers": [
+          {
+            "name": "x-csrf-token",
+            "value": "bhOQy2Nxw2yFwApOZTkOhA==",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "basic",
+          "basic": {
+            "username": "TEST_LBA",
+            "password": "<%3{uUDZNzPZZJp&T6vwVi2qXwNAanmRR$Hy}=by"
+          }
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "root": {
+    "request": {
+      "auth": {
+        "mode": "basic"
+      }
+    }
+  },
+  "brunoConfig": {
+    "version": "1",
+    "name": "CodeJam",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0,
+    "filesCount": 0
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Delete Values from ABAP
+  type: http
+  seq: 6
+}
+
+delete {
+  url: https://ffc96189-30d5-4d4f-a63a-f9c39b653d16.abap.us10.hana.ondemand.com/sap/opu/odata/sap/Z_PROFILE_SRV_BIND/Z_I_PROFILEVAL(profile_id='5',value_id='1')
+  body: none
+  auth: basic
+}
+
+headers {
+  x-csrf-token: bhOQy2Nxw2yFwApOZTkOhA==
+}
+
+auth:basic {
+  username: TEST_LBA
+  password: <%3{uUDZNzPZZJp&T6vwVi2qXwNAanmRR$Hy}=by
+}
+
+settings {
+  encodeUrl: true
+}

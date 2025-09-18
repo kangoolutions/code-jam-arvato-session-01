@@ -1,0 +1,39 @@
+{
+  "profileHeader": {
+    "profileId": "EP-2022-2024-001",
+    "profileName": "Household Electricity Consumption 2022-2024",
+    "profileType": "AnnualEnergyProfile",
+    "description": "Aggregated energy profile for a household customer from 2022 to 2024.",
+    "unit": "kW",
+    "totalPeriod": {
+      "start": "2022-01-01",
+      "end": "2024-12-31"
+    },
+    "totalEnergyAmount": 9000.4,
+    "createdAt": "2024-05-16",
+    "createdBy": "EnergyMonitoringSystem",
+    "additionalInformation": {
+      "customerType": "Household",
+      "region": "SampleCity",
+      "dataSource": "SmartMeter",
+      "profileVersion": "1.0"
+    }
+  },
+  "profileValues": [
+    {  
+      "start": "2022-01-01",
+      "end": "2022-12-31",
+      "energyAmount": 3200.5
+    },
+    {
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "energyAmount": 2950.2
+    },
+    {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "energyAmount": 2849.7
+    }
+  ]
+}
