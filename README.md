@@ -1,4 +1,4 @@
-# 👋 Willkommen zum Code Jam 2025 – #TeneriffaEdition
+# 👋 Willkommen zum Code Jam 2025 – #arvatoEdition
 
 Hier dreht sich alles um gemeinsames Coden, Lernen und Ausprobieren in entspannter Atmosphäre – mit einer Prise Sonne und Meeresrauschen.
 
