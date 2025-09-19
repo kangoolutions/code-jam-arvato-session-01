@@ -70,7 +70,9 @@ Alle weitere Infos und Dokumente, hier im Repo!
 ## Weitere Dokumente/Links
 SAP Big Picture
 https://www.sap.com/germany/documents/2025/02/1288d9d0-f57e-0010-bca6-c68f7e60039b.html
+
 ABAP RESTful Application Programming Model (RAP) – Overview
 https://www.sap.com/documents/2024/06/700d3390-c27e-0010-bca6-c68f7e60039b.html
+
 Einfacher RAP Kurs (RAP100)
 https://github.com/SAP-samples/abap-platform-rap100/
